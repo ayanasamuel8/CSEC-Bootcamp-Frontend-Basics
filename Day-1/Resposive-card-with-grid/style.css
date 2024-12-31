@@ -1,0 +1,62 @@
+.main{
+    display: grid;
+    grid-auto-rows: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 10px;
+}
+.container{
+    display: grid;
+    grid-template-areas: "image image"
+                         "name price" 
+                         "discription discription";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 50px 1fr;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+}
+.container .image{
+    grid-area: image;
+    background-color: aqua;
+    background-size:calc(100% - 10px) calc(100% - 2px);
+}
+.img-1{
+    background-image: url("https://th.bing.com/th?id=OIP.wMftsrP6USIHg4aMEpwnPQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+.img-2{
+    background-image: url("https://th.bing.com/th?id=OIP.JN2YuhRiEVw4-QjfLIBHkgHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+
+.img-3{
+    background-image: url("https://th.bing.com/th?id=OIP.Vui1gAtnHmqJTYC5Xi0kMgHaFC&w=303&h=206&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+.img-4{
+    background-image: url("https://th.bing.com/th?id=OIP.PnSJoDi7Z0ftKk5-bAyFYAHaJb&w=221&h=281&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+.img-5{
+    background-image: url("https://th.bing.com/th?id=OIP.vGUdU_pdwlcY8K2mPERAHgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+.img-6{
+    background-image: url("https://th.bing.com/th?id=OIP.8uBciaVnWPhj3BqjYmH7wgHaDo&w=349&h=171&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+.container .name{
+    grid-area: name;
+    background-image:linear-gradient(90deg,rgb(234, 181, 37), rgb(255, 255, 255));
+    font-size: small;
+}
+.container .price{
+    grid-area: price;
+    background-image:linear-gradient(90deg,rgb(240, 203, 203),rgb(253, 253, 253));
+    font-size: x-small;
+    color: red;
+}
+.container .discription{
+    grid-area: discription;
+    background-image: linear-gradient(90deg,rgb(253, 253, 253), rgb(240, 203, 203));;
+    font-size: smaller;
+}
+@media screen and (max-width: 768px){
+    .main{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+}
